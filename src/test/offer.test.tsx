@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { BONUSES, PLANS } from "@/components/sales/content";
+import { BONUSES, PLANS, PURCHASE_FEED } from "@/components/sales/content";
 
 describe("Offer rules", () => {
   it("Plano Básico costs R$ 9,90 with anchor R$ 29,90", () => {
@@ -16,5 +16,12 @@ describe("Offer rules", () => {
     expect(BONUSES).toHaveLength(4);
     const total = BONUSES.reduce((sum, b) => sum + Number.parseInt(b.count, 10), 0);
     expect(total).toBe(25);
+  });
+});
+
+describe("Purchase notifications", () => {
+  it("only mention plans that exist in the offer", () => {
+    const valid = [PLANS.basico.title, PLANS.completo.title];
+    for (const p of PURCHASE_FEED) expect(valid).toContain(p.plan);
   });
 });

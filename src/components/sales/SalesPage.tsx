@@ -151,17 +151,7 @@ function Themes() {
       <p className="mt-2 text-center text-[15px] leading-relaxed text-muted-foreground">
         Os 18 esquemas de Young distribuídos em cinco blocos progressivos, com situações que você reconhece da vida real:
       </p>
-      <ul className="mt-6 grid gap-3">
-        {THEMES.map((t) => (
-          <li key={t.title} className="flex gap-3 rounded-xl border bg-card p-4">
-            <span className="mt-1.5 size-2.5 shrink-0 rounded-full bg-coral" aria-hidden />
-            <div>
-              <p className="font-display text-[15px] font-extrabold text-navy">{t.title}</p>
-              <p className="mt-0.5 text-[13.5px] leading-snug text-muted-foreground">{t.desc}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <TopicList items={THEMES} className="mt-6" />
       <CtaButton className="mt-8" />
     </Section>
   );
@@ -260,19 +250,8 @@ function IdealFor() {
   return (
     <Section>
       <SectionTitle>Ideal para você que deseja</SectionTitle>
-      <div className="mt-8 grid gap-3">
-        {IDEAL_FOR.map((v) => (
-          <div key={v.title} className="flex items-start gap-3 rounded-xl border bg-card p-4">
-            <span className="text-2xl leading-none" aria-hidden>
-              {v.emoji}
-            </span>
-            <div>
-              <p className="font-display text-[15px] font-extrabold text-navy">{v.title}</p>
-              <p className="mt-0.5 text-[13.5px] leading-snug text-muted-foreground">{v.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <TopicList items={IDEAL_FOR} className="mt-8" />
+      <CtaButton className="mt-8" />
     </Section>
   );
 }
