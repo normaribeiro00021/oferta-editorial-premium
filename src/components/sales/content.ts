@@ -34,6 +34,30 @@ export const VALUE_ITEMS = [
   { emoji: "📱", title: "Estude em qualquer lugar", desc: "PDF para celular, tablet, computador ou impressão A4." },
 ];
 
+// Antes × Depois: material comum (texto corrido) vs. caso visual.
+export const BEFORE_AFTER = [
+  { before: "Blocos de texto corrido", after: "Cenas ilustradas do cotidiano" },
+  { before: "Definições soltas", after: "Raciocínio em 5 etapas" },
+  { before: "Conceitos que se misturam", after: "Comparações lado a lado" },
+  { before: "Horas para revisar", after: "Uma ficha, poucos minutos" },
+];
+
+// TODO: exemplos ilustrativos — substitua por compras reais (nome e cidade autorizados).
+export const PURCHASE_FEED = [
+  { name: "Mariana", city: "Recife", uf: "PE", plan: "Plano Completo" },
+  { name: "Lucas", city: "Belo Horizonte", uf: "MG", plan: "Plano Completo" },
+  { name: "Ana Clara", city: "Curitiba", uf: "PR", plan: "Plano Básico" },
+  { name: "Juliana", city: "Salvador", uf: "BA", plan: "Plano Completo" },
+  { name: "Gabriel", city: "Fortaleza", uf: "CE", plan: "Plano Completo" },
+  { name: "Beatriz", city: "Porto Alegre", uf: "RS", plan: "Plano Básico" },
+  { name: "Camila", city: "Goiânia", uf: "GO", plan: "Plano Completo" },
+  { name: "Rafaela", city: "Campinas", uf: "SP", plan: "Plano Completo" },
+  { name: "Thiago", city: "Manaus", uf: "AM", plan: "Plano Básico" },
+  { name: "Larissa", city: "Florianópolis", uf: "SC", plan: "Plano Completo" },
+  { name: "Fernanda", city: "Natal", uf: "RN", plan: "Plano Completo" },
+  { name: "Isabela", city: "Rio de Janeiro", uf: "RJ", plan: "Plano Completo" },
+];
+
 export const IDEAL_FOR = [
   { emoji: "🎓", title: "Ir bem nas disciplinas", desc: "Revisar abordagens cognitivo-comportamentais com clareza." },
   { emoji: "🧭", title: "Parar de confundir conceitos", desc: "Separar esquema, modo e enfrentamento sem travar." },
