@@ -285,15 +285,15 @@ export function VisualPage() {
   ];
   return (
     <div className="absolute inset-0 flex flex-col gap-2.5 bg-background p-4">
-      <div className="flex items-center justify-end gap-2">
-        <span className="font-sans text-[8px] font-medium uppercase tracking-wider text-muted-foreground">
-          Bloco 01
-        </span>
+      <div className="flex items-center justify-between gap-2">
         <span className="rounded bg-navy px-1.5 py-0.5 font-display text-[9px] font-extrabold tracking-[0.15em] text-on-dark">
           CASO 01
         </span>
+        <span className="font-sans text-[8px] font-medium uppercase tracking-wider text-muted-foreground">
+          Bloco 01
+        </span>
       </div>
-      <p className="text-right font-display text-[14px] font-extrabold leading-tight text-navy">
+      <p className="font-display text-[14px] font-extrabold leading-tight text-navy">
         O silêncio depois da mensagem
       </p>
       <div className="relative flex flex-1 items-end justify-center gap-8 overflow-hidden rounded-xl bg-teal-soft pb-3">
