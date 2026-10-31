@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Sales page copy, prices and checkout links live in `src/components/sales/content.ts`; sections read from it so offer changes touch one file.
+- Product imagery is CSS placeholders in `src/components/sales/Visuals.tsx` (zero image bytes, for load speed); swap each for a real optimized image when artwork exists.
+- Carousels use the CSS `animate-marquee` utility with two identical tracks (no JS carousel library) to stay lightweight and always moving.

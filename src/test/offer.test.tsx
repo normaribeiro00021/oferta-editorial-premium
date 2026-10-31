@@ -1,0 +1,20 @@
+import { describe, expect, it } from "vitest";
+import { BONUSES, PLANS } from "@/components/sales/content";
+
+describe("Offer rules", () => {
+  it("Plano Básico costs R$ 9,90 with anchor R$ 29,90", () => {
+    expect(PLANS.basico.price).toBe("9,90");
+    expect(PLANS.basico.anchor).toBe("R$ 29,90");
+  });
+
+  it("Plano Completo costs R$ 19,90 with anchor R$ 59,90", () => {
+    expect(PLANS.completo.price).toBe("19,90");
+    expect(PLANS.completo.anchor).toBe("R$ 59,90");
+  });
+
+  it("Plano Completo includes 4 bonuses totaling 25 extra materials", () => {
+    expect(BONUSES).toHaveLength(4);
+    const total = BONUSES.reduce((sum, b) => sum + Number.parseInt(b.count, 10), 0);
+    expect(total).toBe(25);
+  });
+});
