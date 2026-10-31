@@ -326,7 +326,7 @@ export function VisualPage() {
           5
         </span>
         <p className="font-sans text-[9px] leading-tight text-on-dark">
-          <strong className="font-semibold">Consequência:</strong> checa o celular sem parar e reforça o padrão
+          <strong className="font-semibold">Consequência:</strong> checar o celular reforça o padrão
         </p>
       </div>
     </div>
