@@ -30,8 +30,8 @@ export function PurchaseToast() {
     return () => clearTimeout(timer);
   }, [closed]);
 
-  if (closed) return null;
   const p = PURCHASE_FEED[index];
+  if (closed || !p) return null;
   const initials = p.name
     .split(" ")
     .map((w) => w[0])
