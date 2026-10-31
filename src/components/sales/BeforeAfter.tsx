@@ -41,16 +41,10 @@ export function BeforeAfterSlider() {
     >
       {/* DEPOIS (fundo) */}
       <VisualPage />
-      <span className="absolute bottom-3 right-3 z-10 rounded-full bg-teal px-2.5 py-1 font-display text-[10px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
-        Depois
-      </span>
 
       {/* ANTES (recortado) */}
       <div className="absolute inset-0 z-10" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
         <TextPage />
-        <span className="absolute bottom-3 left-3 rounded-full bg-navy px-2.5 py-1 font-display text-[10px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
-          Antes
-        </span>
       </div>
 
       {/* Alça */}

@@ -66,7 +66,15 @@ function BeforeAfter() {
       <p className="mt-3 text-center text-[15px] leading-relaxed text-muted-foreground">
         O mesmo conteúdo, de dois jeitos. Arraste e veja a diferença entre a apostila comum e um caso visual.
       </p>
-      <div className="mt-7">
+      <div className="mx-auto mt-7 flex max-w-[20rem] items-center justify-between">
+        <span className="rounded-full bg-navy px-3 py-1 font-display text-[10px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
+          ← Antes
+        </span>
+        <span className="rounded-full bg-teal px-3 py-1 font-display text-[10px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
+          Depois →
+        </span>
+      </div>
+      <div className="mt-3">
         <BeforeAfterSlider />
       </div>
       <p className="mt-3 text-center text-[12.5px] font-medium text-muted-foreground">↔ Arraste para comparar</p>
