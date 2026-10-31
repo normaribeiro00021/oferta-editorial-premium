@@ -1,4 +1,5 @@
 import {
+  BEFORE_AFTER,
   BLOCKS,
   BONUSES,
   CONFIRM_GRID,
@@ -19,6 +20,7 @@ import {
   Marquee,
   Section,
   SectionTitle,
+  TopicList,
 } from "./Primitives";
 import {
   BonusArt,
@@ -30,6 +32,8 @@ import {
   SampleMap,
   SampleModes,
 } from "./Visuals";
+import { BeforeAfterSlider } from "./BeforeAfter";
+import { PurchaseToast } from "./PurchaseToast";
 
 export function SalesPage() {
   return (
@@ -38,6 +42,7 @@ export function SalesPage() {
       <Themes />
       <WhyValuable />
       <Pain />
+      <BeforeAfter />
       <SampleCarousel />
       <IdealFor />
       <Deliverables />
@@ -47,7 +52,51 @@ export function SalesPage() {
       <HowAccess />
       <Faq />
       <Footer />
+      <PurchaseToast />
     </main>
+  );
+}
+
+/* Antes × Depois */
+function BeforeAfter() {
+  return (
+    <Section>
+      <Kicker className="text-center">Antes × Depois</Kicker>
+      <SectionTitle className="mt-3">Do texto corrido ao raciocínio visual</SectionTitle>
+      <p className="mt-3 text-center text-[15px] leading-relaxed text-muted-foreground">
+        O mesmo conteúdo, de dois jeitos. Arraste e veja a diferença entre a apostila comum e um caso visual.
+      </p>
+      <div className="mt-7">
+        <BeforeAfterSlider />
+      </div>
+      <p className="mt-3 text-center text-[12.5px] font-medium text-muted-foreground">↔ Arraste para comparar</p>
+
+      <div className="mt-7 overflow-hidden rounded-2xl border bg-card">
+        <div className="grid grid-cols-2">
+          <p className="bg-muted px-3 py-2.5 text-center font-display text-[11px] font-extrabold uppercase tracking-[0.18em] text-muted-foreground">
+            Material comum
+          </p>
+          <p className="bg-teal px-3 py-2.5 text-center font-display text-[11px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
+            40 Casos Visuais
+          </p>
+        </div>
+        {BEFORE_AFTER.map((r) => (
+          <div key={r.before} className="grid grid-cols-2 border-t">
+            <p className="flex items-start gap-2 px-3 py-3 text-[13px] leading-snug text-muted-foreground">
+              <span className="font-display font-extrabold text-coral" aria-hidden>
+                ✕
+              </span>
+              {r.before}
+            </p>
+            <p className="flex items-start gap-2 border-l bg-teal-soft px-3 py-3 text-[13px] font-medium leading-snug text-navy">
+              <CheckIcon className="size-4" />
+              {r.after}
+            </p>
+          </div>
+        ))}
+      </div>
+      <CtaButton className="mt-8">Quero estudar pelo visual</CtaButton>
+    </Section>
   );
 }
 

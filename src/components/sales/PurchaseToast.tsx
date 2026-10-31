@@ -52,7 +52,7 @@ export function PurchaseToast() {
       <p className="flex-1 text-[12.5px] leading-snug text-muted-foreground">
         <strong className="font-semibold text-navy">{p.name}</strong>, de {p.city} ({p.uf}), comprou o{" "}
         <strong className="font-semibold text-teal">{p.plan}</strong>
-        <span className="mt-0.5 block text-[11px]">✓ Compra verificada · agora há pouco</span>
+        <span className="mt-0.5 block text-[11px]">⚡ Acesso liberado no e-mail</span>
       </p>
       <button
         type="button"
