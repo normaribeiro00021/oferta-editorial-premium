@@ -48,7 +48,7 @@ export function CaseSheet({
   title: string;
   block: string;
   thought?: string;
-  tone?: "teal" | "coral";
+  tone?: "teal" | "coral" | undefined;
   className?: string;
 }) {
   return (
