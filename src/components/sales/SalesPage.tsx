@@ -1,4 +1,5 @@
 import {
+  BEFORE_AFTER,
   BLOCKS,
   BONUSES,
   CONFIRM_GRID,
@@ -19,6 +20,7 @@ import {
   Marquee,
   Section,
   SectionTitle,
+  TopicList,
 } from "./Primitives";
 import {
   BonusArt,
@@ -30,6 +32,8 @@ import {
   SampleMap,
   SampleModes,
 } from "./Visuals";
+import { BeforeAfterSlider } from "./BeforeAfter";
+import { PurchaseToast } from "./PurchaseToast";
 
 export function SalesPage() {
   return (
@@ -38,6 +42,7 @@ export function SalesPage() {
       <Themes />
       <WhyValuable />
       <Pain />
+      <BeforeAfter />
       <SampleCarousel />
       <IdealFor />
       <Deliverables />
@@ -47,7 +52,59 @@ export function SalesPage() {
       <HowAccess />
       <Faq />
       <Footer />
+      <PurchaseToast />
     </main>
+  );
+}
+
+/* Antes × Depois */
+function BeforeAfter() {
+  return (
+    <Section>
+      <Kicker className="text-center">Antes × Depois</Kicker>
+      <SectionTitle className="mt-3">Do texto corrido ao raciocínio visual</SectionTitle>
+      <p className="mt-3 text-center text-[15px] leading-relaxed text-muted-foreground">
+        O mesmo conteúdo, de dois jeitos. Arraste e veja a diferença entre a apostila comum e um caso visual.
+      </p>
+      <div className="mx-auto mt-7 flex max-w-[20rem] items-center justify-between">
+        <span className="rounded-full bg-navy px-3 py-1 font-display text-[10px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
+          ← Antes
+        </span>
+        <span className="rounded-full bg-teal px-3 py-1 font-display text-[10px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
+          Depois →
+        </span>
+      </div>
+      <div className="mt-3">
+        <BeforeAfterSlider />
+      </div>
+      <p className="mt-3 text-center text-[12.5px] font-medium text-muted-foreground">↔ Arraste para comparar</p>
+
+      <div className="mt-7 overflow-hidden rounded-2xl border bg-card">
+        <div className="grid grid-cols-2">
+          <p className="bg-muted px-3 py-2.5 text-center font-display text-[11px] font-extrabold uppercase tracking-[0.18em] text-muted-foreground">
+            Material comum
+          </p>
+          <p className="bg-teal px-3 py-2.5 text-center font-display text-[11px] font-extrabold uppercase tracking-[0.18em] text-on-dark">
+            40 Casos Visuais
+          </p>
+        </div>
+        {BEFORE_AFTER.map((r) => (
+          <div key={r.before} className="grid grid-cols-2 border-t">
+            <p className="flex items-start gap-2 px-3 py-3 text-[13px] leading-snug text-muted-foreground">
+              <span className="font-display font-extrabold text-coral" aria-hidden>
+                ✕
+              </span>
+              {r.before}
+            </p>
+            <p className="flex items-start gap-2 border-l bg-teal-soft px-3 py-3 text-[13px] font-medium leading-snug text-navy">
+              <CheckIcon className="size-4" />
+              {r.after}
+            </p>
+          </div>
+        ))}
+      </div>
+      <CtaButton className="mt-8">Quero estudar pelo visual</CtaButton>
+    </Section>
   );
 }
 
@@ -102,17 +159,7 @@ function Themes() {
       <p className="mt-2 text-center text-[15px] leading-relaxed text-muted-foreground">
         Os 18 esquemas de Young distribuídos em cinco blocos progressivos, com situações que você reconhece da vida real:
       </p>
-      <ul className="mt-6 grid gap-3">
-        {THEMES.map((t) => (
-          <li key={t.title} className="flex gap-3 rounded-xl border bg-card p-4">
-            <span className="mt-1.5 size-2.5 shrink-0 rounded-full bg-coral" aria-hidden />
-            <div>
-              <p className="font-display text-[15px] font-extrabold text-navy">{t.title}</p>
-              <p className="mt-0.5 text-[13.5px] leading-snug text-muted-foreground">{t.desc}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <TopicList items={THEMES} className="mt-6" />
       <CtaButton className="mt-8" />
     </Section>
   );
@@ -211,19 +258,8 @@ function IdealFor() {
   return (
     <Section>
       <SectionTitle>Ideal para você que deseja</SectionTitle>
-      <div className="mt-8 grid gap-3">
-        {IDEAL_FOR.map((v) => (
-          <div key={v.title} className="flex items-start gap-3 rounded-xl border bg-card p-4">
-            <span className="text-2xl leading-none" aria-hidden>
-              {v.emoji}
-            </span>
-            <div>
-              <p className="font-display text-[15px] font-extrabold text-navy">{v.title}</p>
-              <p className="mt-0.5 text-[13.5px] leading-snug text-muted-foreground">{v.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <TopicList items={IDEAL_FOR} className="mt-8" />
+      <CtaButton className="mt-8" />
     </Section>
   );
 }

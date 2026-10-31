@@ -90,6 +90,29 @@ export function Section({
   );
 }
 
+// Clean topic list: coral marker + bold title + one-line explanation.
+export function TopicList({
+  items,
+  className,
+}: {
+  items: { title: string; desc: string }[];
+  className?: string;
+}) {
+  return (
+    <ul className={cn("grid gap-3", className)}>
+      {items.map((t) => (
+        <li key={t.title} className="flex gap-3 rounded-xl border bg-card px-4 py-3.5">
+          <span className="mt-[7px] size-2.5 shrink-0 rounded-full bg-coral" aria-hidden />
+          <div>
+            <p className="font-display text-[15px] font-extrabold leading-snug text-navy">{t.title}</p>
+            <p className="mt-0.5 text-[13.5px] leading-snug text-muted-foreground">{t.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function CheckIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 20 20" className={cn("size-5 shrink-0", className)} aria-hidden>
