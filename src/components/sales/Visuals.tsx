@@ -237,3 +237,98 @@ export function GuaranteeSeal() {
     </div>
   );
 }
+
+/* ANTES — página de apostila comum, só texto corrido */
+export function TextPage() {
+  return (
+    <div className="absolute inset-0 flex flex-col bg-muted p-4">
+      <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+        Apostila · Unidade 3
+      </p>
+      <p className="mt-1.5 font-sans text-[12px] font-bold leading-tight text-muted-foreground">
+        3.2 O esquema de Abandono/Instabilidade
+      </p>
+      <div className="relative mt-2 flex-1 overflow-hidden">
+        <p className="text-justify font-sans text-[8.5px] leading-[1.45] text-muted-foreground">
+          O esquema de Abandono/Instabilidade pertence ao domínio de Desconexão e Rejeição e refere-se à percepção de
+          que as pessoas significativas não poderão continuar oferecendo apoio emocional, vínculo ou proteção, seja por
+          serem emocionalmente instáveis e imprevisíveis, seja por não estarem presentes de forma consistente. Os
+          esquemas iniciais desadaptativos são padrões amplos e difusos, compostos por memórias, emoções, cognições e
+          sensações corporais, desenvolvidos durante a infância ou adolescência e elaborados ao longo da vida.
+        </p>
+        <p className="mt-1.5 text-justify font-sans text-[8.5px] leading-[1.45] text-muted-foreground">
+          Os estilos de enfrentamento — resignação, evitação e hipercompensação — descrevem as respostas
+          comportamentais diante da ativação do esquema, enquanto os modos esquemáticos correspondem aos estados
+          emocionais predominantes em determinado momento. A distinção entre esquema, modo e estilo de enfrentamento é
+          fundamental para a compreensão do modelo, embora na prática esses elementos frequentemente se sobreponham, o
+          que exige do estudante atenção à função de cada resposta, ao contexto de ativação e às necessidades
+          emocionais não atendidas que estão na origem do padrão observado em cada situação.
+        </p>
+        <p className="mt-1.5 text-justify font-sans text-[8.5px] leading-[1.45] text-muted-foreground">
+          Em síntese, a avaliação deve considerar a história de vida, as crenças nucleares e os comportamentos de
+          manutenção, diferenciando-os de esquemas correlatos, como a Privação Emocional, cuja ênfase recai sobre a
+          ausência de cuidado, empatia e orientação, e não sobre a instabilidade do vínculo propriamente dita.
+        </p>
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-muted to-transparent" />
+      </div>
+    </div>
+  );
+}
+
+/* DEPOIS — o mesmo conteúdo como caso visual */
+export function VisualPage() {
+  const cells = [
+    { l: "Situação", v: "Mensagem sem resposta", c: "text-teal" },
+    { l: "Esquema", v: "Abandono (hipótese)", c: "text-coral" },
+    { l: "Emoções", v: "Medo e ansiedade", c: "text-teal" },
+    { l: "Modo", v: "Criança Vulnerável", c: "text-coral" },
+  ];
+  return (
+    <div className="absolute inset-0 flex flex-col gap-2.5 bg-background p-4">
+      <div className="flex items-center justify-end gap-2">
+        <span className="font-sans text-[8px] font-medium uppercase tracking-wider text-muted-foreground">
+          Bloco 01
+        </span>
+        <span className="rounded bg-navy px-1.5 py-0.5 font-display text-[9px] font-extrabold tracking-[0.15em] text-on-dark">
+          CASO 01
+        </span>
+      </div>
+      <p className="text-right font-display text-[14px] font-extrabold leading-tight text-navy">
+        O silêncio depois da mensagem
+      </p>
+      <div className="relative flex flex-1 items-end justify-center gap-8 overflow-hidden rounded-xl bg-teal-soft pb-3">
+        <div className="absolute left-1/2 top-3 max-w-[78%] -translate-x-1/2 rounded-2xl bg-background px-3 py-1.5 text-center font-sans text-[10px] font-medium leading-tight text-navy shadow-card">
+          “Talvez ele vá me abandonar…”
+        </div>
+        <div className="absolute right-5 top-14 grid h-9 w-6 place-items-center rounded-md bg-navy">
+          <span className="size-1.5 rounded-full bg-coral" />
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="size-8 rounded-full bg-navy" />
+          <div className="mt-0.5 h-11 w-14 rounded-t-full bg-navy/85" />
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-1.5">
+        {cells.map((x, i) => (
+          <div key={x.l} className="flex items-start gap-1.5 rounded-lg bg-muted px-2 py-1.5">
+            <span className="mt-px grid size-3.5 shrink-0 place-items-center rounded-full bg-navy font-display text-[7px] font-extrabold text-on-dark">
+              {i + 1}
+            </span>
+            <div>
+              <p className={cn("font-display text-[8px] font-extrabold uppercase tracking-wider", x.c)}>{x.l}</p>
+              <p className="font-sans text-[9.5px] font-medium leading-tight text-navy">{x.v}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex items-center gap-1.5 rounded-lg bg-navy px-2 py-1.5">
+        <span className="grid size-3.5 shrink-0 place-items-center rounded-full bg-coral font-display text-[7px] font-extrabold text-navy">
+          5
+        </span>
+        <p className="font-sans text-[9px] leading-tight text-on-dark">
+          <strong className="font-semibold">Consequência:</strong> checa o celular sem parar e reforça o padrão
+        </p>
+      </div>
+    </div>
+  );
+}
