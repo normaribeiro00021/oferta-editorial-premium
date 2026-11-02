@@ -49,7 +49,7 @@ export function KitImage({ className, priority }: Props) {
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding={priority ? "sync" : "async"}
-      className={cn("mx-auto aspect-square h-auto w-full max-w-[420px] mix-blend-multiply", className)}
+      className={cn("mx-auto aspect-square h-auto w-full max-w-[420px]", className)}
     />
   );
 }
@@ -66,7 +66,7 @@ export function MainProductImage({ className }: Props) {
       alt="Livro dos 40 Casos Visuais, tablet com o Caso 20 e fichas dos casos 01 e 37"
       loading="lazy"
       decoding="async"
-      className={cn("mx-auto aspect-square h-auto w-full max-w-[420px] mix-blend-multiply", className)}
+      className={cn("mx-auto aspect-square h-auto w-full max-w-[420px]", className)}
     />
   );
 }
@@ -84,7 +84,7 @@ export function BonusImage({ n, className }: { n: number; className?: string }) 
       alt={img.alt}
       loading="lazy"
       decoding="async"
-      className={cn("aspect-square h-auto w-full rounded-xl bg-background", className)}
+      className={cn("aspect-square h-auto w-full rounded-xl bg-paper", className)}
     />
   );
 }

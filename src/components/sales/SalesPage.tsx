@@ -429,7 +429,7 @@ function Offer() {
         <p className="font-display text-[1.25rem] font-extrabold text-on-dark">{completo.title}</p>
         <p className="font-display text-[14px] font-semibold text-coral">{completo.subtitle}</p>
         <p className="mt-2 text-[13.5px] leading-snug text-on-dark-muted">{completo.desc}</p>
-        <div className="mt-4 overflow-hidden rounded-xl bg-background p-1">
+        <div className="mt-4 rounded-xl bg-teal-soft p-2">
           <KitImage />
         </div>
         <ul className="mt-5 grid gap-2.5">
