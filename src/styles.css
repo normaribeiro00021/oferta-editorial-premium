@@ -52,6 +52,7 @@
   --color-paper: var(--paper);
   --color-on-dark: var(--on-dark);
   --color-on-dark-muted: var(--on-dark-muted);
+  --color-urgency-highlight: var(--urgency-highlight);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -81,6 +82,13 @@
   --paper: oklch(0.985 0.006 220);
   --on-dark: oklch(1 0 0);
   --on-dark-muted: oklch(0.86 0.025 240);
+
+  /* Urgency bar — deep navy into an electric blue */
+  --urgency-from: var(--navy);
+  --urgency-to: oklch(0.52 0.19 258);
+  --urgency-highlight: oklch(0.86 0.12 215);
+  --gradient-urgency: linear-gradient(100deg, var(--urgency-from) 0%, var(--urgency-to) 55%, var(--urgency-from) 100%);
+  --shadow-urgency: 0 6px 18px -8px oklch(0.52 0.19 258 / 70%);
 
   --background: oklch(1 0 0);
   --foreground: var(--navy);
@@ -185,4 +193,30 @@
 
 @utility animate-cta {
   animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+@utility bg-urgency {
+  background-image: var(--gradient-urgency);
+}
+
+@utility shadow-urgency {
+  box-shadow: var(--shadow-urgency);
+}
+
+@utility bg-shine {
+  background-image: linear-gradient(100deg, transparent, oklch(1 0 0 / 22%), transparent);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(0);
+  }
+  60%,
+  100% {
+    transform: translateX(450%);
+  }
+}
+
+@utility animate-shine {
+  animation: shine 3.2s ease-in-out infinite;
 }

@@ -34,10 +34,12 @@ import {
 } from "./Visuals";
 import { BeforeAfterSlider } from "./BeforeAfter";
 import { PurchaseToast } from "./PurchaseToast";
+import { UrgencyBar } from "./UrgencyBar";
 
 export function SalesPage() {
   return (
-    <main className="overflow-x-hidden bg-background">
+    <main className="overflow-x-clip bg-background">
+      <UrgencyBar />
       <Hero />
       <Themes />
       <WhyValuable />
@@ -389,7 +391,7 @@ function Bonuses() {
 function Offer() {
   const { basico, completo } = PLANS;
   return (
-    <Section id="oferta" className="scroll-mt-4 bg-paper">
+    <Section id="oferta" className="scroll-mt-16 bg-paper">
       <Kicker className="text-center text-coral">Condição especial de lançamento</Kicker>
       <SectionTitle className="mt-3">Garanta hoje os 40 casos pelo menor preço</SectionTitle>
       <p className="mt-2 text-center text-[15px] text-muted-foreground">Escolha a opção ideal para você</p>
