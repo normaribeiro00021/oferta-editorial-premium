@@ -11,5 +11,5 @@
 
 ## Project rules
 - Sales page copy, prices and checkout links live in `src/components/sales/content.ts`; sections read from it so offer changes touch one file.
-- Product imagery is CSS placeholders in `src/components/sales/Visuals.tsx` (zero image bytes, for load speed); swap each for a real optimized image when artwork exists.
+- Product mockups are CDN WebP assets in several widths, rendered via `src/components/sales/Mockups.tsx` with srcset/lazy loading (only the hero loads eagerly, for load speed); remaining illustrations are CSS in `Visuals.tsx`.
 - Carousels use the CSS `animate-marquee` utility with two identical tracks (no JS carousel library) to stay lightweight and always moving.

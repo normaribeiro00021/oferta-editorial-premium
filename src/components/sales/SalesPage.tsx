@@ -22,16 +22,8 @@ import {
   SectionTitle,
   TopicList,
 } from "./Primitives";
-import {
-  BonusArt,
-  CaseSheet,
-  GuaranteeSeal,
-  HeroMock,
-  SampleCompare,
-  SampleFlow,
-  SampleMap,
-  SampleModes,
-} from "./Visuals";
+import { CaseSheet, GuaranteeSeal, SampleCompare, SampleFlow, SampleMap, SampleModes } from "./Visuals";
+import { BonusImage, KitImage, MainProductImage } from "./Mockups";
 import { BeforeAfterSlider } from "./BeforeAfter";
 import { PurchaseToast } from "./PurchaseToast";
 import { UrgencyBar } from "./UrgencyBar";
@@ -123,8 +115,8 @@ function Hero() {
         <Divider className="mt-5" />
       </div>
 
-      <div className="mt-6">
-        <HeroMock />
+      <div className="-mx-2 mt-4">
+        <KitImage priority />
       </div>
 
       <p className="mt-6 text-center text-[15px] leading-relaxed text-muted-foreground">
@@ -279,8 +271,8 @@ function Deliverables() {
         <h2 className="mt-4 text-center text-[1.45rem] font-extrabold leading-tight text-navy">
           Tudo o que você vai receber
         </h2>
-        <div className="mt-4">
-          <HeroMock />
+        <div className="mt-2">
+          <MainProductImage />
         </div>
         <ul className="mt-4 grid gap-2.5">
           {MAIN_ITEMS.map((i) => (
@@ -369,7 +361,7 @@ function Bonuses() {
           <div key={b.n} className="flex flex-col rounded-xl border bg-card p-3 shadow-card">
             <Stars />
             <div className="mt-2">
-              <BonusArt icon={b.icon} n={b.n} count={b.count} />
+              <BonusImage n={b.n} />
             </div>
             <span className="mt-3 w-fit rounded bg-teal px-1.5 py-0.5 font-display text-[10px] font-extrabold uppercase tracking-[0.15em] text-on-dark">
               Bônus Nº {b.n}
@@ -401,7 +393,10 @@ function Offer() {
         <p className="font-display text-[1.25rem] font-extrabold text-navy">{basico.title}</p>
         <p className="font-display text-[14px] font-semibold text-teal">{basico.subtitle}</p>
         <p className="mt-2 text-[13.5px] leading-snug text-muted-foreground">{basico.desc}</p>
-        <ul className="mt-4 grid gap-2.5">
+        <div className="mx-auto mt-3 max-w-[16rem]">
+          <MainProductImage />
+        </div>
+        <ul className="mt-3 grid gap-2.5">
           {MAIN_ITEMS.map((i) => (
             <li key={i} className="flex gap-2.5 text-[13.5px] leading-snug text-navy">
               <CheckIcon />
@@ -434,10 +429,10 @@ function Offer() {
         <p className="font-display text-[1.25rem] font-extrabold text-on-dark">{completo.title}</p>
         <p className="font-display text-[14px] font-semibold text-coral">{completo.subtitle}</p>
         <p className="mt-2 text-[13.5px] leading-snug text-on-dark-muted">{completo.desc}</p>
-        <div className="mt-2">
-          <HeroMock />
+        <div className="mt-4 rounded-xl bg-teal-soft p-2">
+          <KitImage />
         </div>
-        <ul className="mt-2 grid gap-2.5">
+        <ul className="mt-5 grid gap-2.5">
           {MAIN_ITEMS.map((i) => (
             <li key={i} className="flex gap-2.5 text-[13.5px] leading-snug text-on-dark">
               <CheckIcon />
