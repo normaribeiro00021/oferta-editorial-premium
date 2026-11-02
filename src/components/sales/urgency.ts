@@ -3,7 +3,7 @@
 /** End of the promo: the fixed date's last second, or the end of `now`'s day when no date is set. */
 export function getDeadline(now: Date, fixedEnd: string | null): Date {
   if (fixedEnd) {
-    const [y, m, d] = fixedEnd.split("-").map(Number);
+    const [y = 0, m = 1, d = 1] = fixedEnd.split("-").map(Number);
     return new Date(y, m - 1, d, 23, 59, 59, 999);
   }
   return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
