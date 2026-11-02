@@ -22,8 +22,8 @@ import {
   SectionTitle,
   TopicList,
 } from "./Primitives";
-import { CaseSheet, GuaranteeSeal, SampleCompare, SampleFlow, SampleMap, SampleModes } from "./Visuals";
-import { BonusImage, KitImage, MainProductImage } from "./Mockups";
+import { CaseSheet, GuaranteeSeal } from "./Visuals";
+import { BonusImage, INSIDE_PAGES, InsidePage, KitImage, MainProductImage } from "./Mockups";
 import { BeforeAfterSlider } from "./BeforeAfter";
 import { PurchaseToast } from "./PurchaseToast";
 import { UrgencyBar } from "./UrgencyBar";
@@ -239,9 +239,12 @@ function SampleCarousel() {
   return (
     <Section className="bg-paper pb-10">
       <Kicker className="text-center">Espie por dentro</Kicker>
-      <SectionTitle className="mt-3">Diagramas, comparações e mapas em cada ficha</SectionTitle>
-      <Marquee reverse>
-        {[<SampleFlow key="f" />, <SampleCompare key="c" />, <SampleModes key="m" />, <SampleMap key="p" />]}
+      <SectionTitle className="mt-3">Veja como são as páginas por dentro</SectionTitle>
+      <Marquee reverse duration="45s">
+        {INSIDE_PAGES.slice(0, 5).map((p) => <InsidePage key={p.s} {...p} />)}
+      </Marquee>
+      <Marquee duration="45s">
+        {INSIDE_PAGES.slice(5).map((p) => <InsidePage key={p.s} {...p} />)}
       </Marquee>
     </Section>
   );

@@ -2,12 +2,12 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 // Continuous, fast, never-static carousel (two identical tracks, -50% loop).
-export function Marquee({ children, reverse = false }: { children: ReactNode[]; reverse?: boolean }) {
+export function Marquee({ children, reverse = false, duration }: { children: ReactNode[]; reverse?: boolean; duration?: string }) {
   return (
     <div className="relative -mx-5 overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
       <div
         className="flex w-max animate-marquee"
-        style={reverse ? { animationDirection: "reverse" } : undefined}
+        style={{ animationDirection: reverse ? "reverse" : undefined, animationDuration: duration }}
       >
         <div className="flex shrink-0 gap-4 pr-4">{children}</div>
         <div className="flex shrink-0 gap-4 pr-4" aria-hidden>
