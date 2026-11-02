@@ -23,8 +23,7 @@ import {
   TopicList,
 } from "./Primitives";
 import { CaseSheet, GuaranteeSeal } from "./Visuals";
-import { INSIDE_PAGES, InsidePage } from "./Mockups";
-import { BonusImage, KitImage, MainProductImage } from "./Mockups";
+import { BonusImage, INSIDE_PAGES, InsidePage, KitImage, MainProductImage } from "./Mockups";
 import { BeforeAfterSlider } from "./BeforeAfter";
 import { PurchaseToast } from "./PurchaseToast";
 import { UrgencyBar } from "./UrgencyBar";
