@@ -88,3 +88,30 @@ export function BonusImage({ n, className }: { n: number; className?: string }) 
     />
   );
 }
+
+/* Páginas reais do material (miolo), 320w/640w */
+const PAGE_FILES = import.meta.glob("@/assets/paginas/*.asset.json", { eager: true, import: "default" }) as Record<
+  string,
+  { url: string; original_filename: string }
+>;
+export const INSIDE_PAGES = Array.from({ length: 10 }, (_, i) => {
+  const n = String(i + 1).padStart(2, "0");
+  const find = (w: number) => Object.values(PAGE_FILES).find((a) => a.original_filename === `pagina_${n}_${w}.webp`)!.url;
+  return { s: find(320), l: find(640) };
+});
+
+export function InsidePage({ s, l }: { s: string; l: string }) {
+  return (
+    <img
+      src={s}
+      srcSet={`${s} 320w, ${l} 640w`}
+      sizes="220px"
+      width={640}
+      height={906}
+      alt="Página interna do material 40 Casos Visuais"
+      loading="lazy"
+      decoding="async"
+      className="h-auto w-[220px] shrink-0 rounded-xl bg-background shadow-card"
+    />
+  );
+}
