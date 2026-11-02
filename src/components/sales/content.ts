@@ -265,3 +265,8 @@ export const FAQ = [
     a: "Você tem 30 dias de garantia. Se achar que o material não é para você, é só pedir o reembolso e devolvemos 100% do valor, sem burocracia.",
   },
 ];
+
+// Urgency bar. With URGENCY_END_DATE = null the deadline rolls to the end of the visitor's current day.
+// Set a real date ("2026-11-30") once the launch promo has a fixed end, so the countdown stops resetting.
+export const URGENCY_END_DATE: string | null = null;
+export const URGENCY_TEXT = "Promoção de lançamento + 4 bônus válida até";
