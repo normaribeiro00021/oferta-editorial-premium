@@ -22,7 +22,7 @@ import {
   SectionTitle,
   TopicList,
 } from "./Primitives";
-import { CaseSheet, GuaranteeSeal } from "./Visuals";
+import { GuaranteeSeal } from "./Visuals";
 import { BonusImage, INSIDE_PAGES, InsidePage, KitImage, MainProductImage } from "./Mockups";
 import { BeforeAfterSlider } from "./BeforeAfter";
 import { PurchaseToast } from "./PurchaseToast";
@@ -136,18 +136,12 @@ function Hero() {
 
 /* DOBRA 2 — Temas cobertos */
 function Themes() {
-  const sheets = [
-    { n: "01", t: "O silêncio depois da mensagem", b: "Bloco 01", th: "Talvez ele vá me abandonar…" },
-    { n: "12", t: "Busca de Aprovação × Padrões Inflexíveis", b: "Bloco 02", th: "Preciso que gostem de mim", tone: "coral" as const },
-    { n: "17", t: "Concordar para evitar conflitos", b: "Bloco 03", th: "Melhor não discordar…" },
-    { n: "34", t: "Perfeccionismo e medo de críticas no trabalho", b: "Bloco 05", th: "Se errar, vão perceber", tone: "coral" as const },
-  ];
   return (
     <Section>
       <SectionTitle>O que você vai encontrar nos 40 casos</SectionTitle>
-      <Marquee>
-        {sheets.map((s) => (
-          <CaseSheet key={s.n} n={s.n} title={s.t} block={s.b} thought={s.th} tone={s.tone} />
+      <Marquee duration="40s">
+        {[1, 2, 3, 9, 0].map((i) => (
+          <InsidePage key={i} {...INSIDE_PAGES[i]} />
         ))}
       </Marquee>
       <p className="mt-2 text-center text-[15px] leading-relaxed text-muted-foreground">
