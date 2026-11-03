@@ -1,8 +1,7 @@
 // Single source for all sales page copy, prices and checkout links.
 
-// TODO: replace with the real checkout links when available.
-export const CHECKOUT_BASICO = "#oferta";
-export const CHECKOUT_COMPLETO = "#oferta";
+export const CHECKOUT_BASICO = "https://app.zuptos.com.br/checkout/d8c4f17a8e89002e";
+export const CHECKOUT_COMPLETO = "https://app.zuptos.com.br/checkout/e42624e225e4a6c5";
 
 export const PRODUCT_NAME = "40 Casos Visuais de Terapia do Esquema";
 
@@ -218,7 +217,7 @@ export const PLANS = {
     subtitle: "40 casos + 4 bônus exclusivos",
     desc: "Para quem quer ler, comparar, consultar e treinar o raciocínio.",
     anchor: "R$ 59,90",
-    price: "19,90",
+    price: "17,90",
     href: CHECKOUT_COMPLETO,
   },
 };
@@ -254,7 +253,7 @@ export const FAQ = [
   },
   {
     q: "Qual a diferença entre o Básico e o Completo?",
-    a: "O Básico traz os 40 casos visuais. O Completo traz os 40 casos + 4 bônus (25 pranchas e fichas extras) para consultar, comparar e treinar. A diferença é de apenas R$ 10.",
+    a: "O Básico traz os 40 casos visuais. O Completo traz os 40 casos + 4 bônus (25 pranchas e fichas extras) para consultar, comparar e treinar. A diferença é de apenas R$ 8.",
   },
   {
     q: "É assinatura ou pagamento único?",

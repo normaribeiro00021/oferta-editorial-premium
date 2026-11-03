@@ -7,8 +7,8 @@ describe("Offer rules", () => {
     expect(PLANS.basico.anchor).toBe("R$ 29,90");
   });
 
-  it("Plano Completo costs R$ 19,90 with anchor R$ 59,90", () => {
-    expect(PLANS.completo.price).toBe("19,90");
+  it("Plano Completo costs R$ 17,90 with anchor R$ 59,90", () => {
+    expect(PLANS.completo.price).toBe("17,90");
     expect(PLANS.completo.anchor).toBe("R$ 59,90");
   });
 

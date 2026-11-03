@@ -459,7 +459,7 @@ function Offer() {
           Quero o Plano Completo
         </CtaButton>
         <p className="mt-3 text-center text-[12.5px] text-on-dark-muted">
-          Só R$ 10 a mais para levar os 4 bônus
+          Só R$ 8 a mais para levar os 4 bônus
         </p>
       </div>
 
