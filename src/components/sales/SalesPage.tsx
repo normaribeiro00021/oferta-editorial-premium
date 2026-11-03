@@ -140,8 +140,8 @@ function Themes() {
     <Section>
       <SectionTitle>O que você vai encontrar nos 40 casos</SectionTitle>
       <Marquee duration="40s">
-        {[1, 2, 3, 9, 0].map((i) => (
-          <InsidePage key={i} {...INSIDE_PAGES[i]} />
+        {[1, 2, 3, 9, 0].map((i) => INSIDE_PAGES[i]!).map((pg, i) => (
+          <InsidePage key={i} {...pg} />
         ))}
       </Marquee>
       <p className="mt-2 text-center text-[15px] leading-relaxed text-muted-foreground">
