@@ -12,10 +12,10 @@ describe("Offer rules", () => {
     expect(PLANS.completo.anchor).toBe("R$ 59,90");
   });
 
-  it("Plano Completo includes 4 bonuses totaling 25 extra materials", () => {
-    expect(BONUSES).toHaveLength(4);
+  it("Plano Completo includes 5 bonuses totaling 49 extra materials", () => {
+    expect(BONUSES).toHaveLength(5);
     const total = BONUSES.reduce((sum, b) => sum + Number.parseInt(b.count, 10), 0);
-    expect(total).toBe(25);
+    expect(total).toBe(49);
   });
 });
 

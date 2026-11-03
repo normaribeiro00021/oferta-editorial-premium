@@ -346,12 +346,12 @@ function Bonuses() {
     <Section>
       <div className="flex justify-center">
         <span className="rounded-full bg-coral px-3 py-1 font-display text-[11px] font-extrabold uppercase tracking-[0.2em] text-navy">
-          🎁 4 bônus exclusivos
+          🎁 5 bônus exclusivos
         </span>
       </div>
       <SectionTitle className="mt-4">Bônus exclusivos do Plano Completo</SectionTitle>
       <p className="mt-3 text-center text-[14.5px] text-muted-foreground">
-        25 pranchas e fichas extras para consultar, comparar e treinar o raciocínio.
+        49 pranchas, mapas e fichas extras para consultar, comparar e treinar o raciocínio.
       </p>
       <div className="mt-8 grid grid-cols-2 gap-3">
         {BONUSES.map((b) => (
@@ -459,13 +459,13 @@ function Offer() {
           Quero o Plano Completo
         </CtaButton>
         <p className="mt-3 text-center text-[12.5px] text-on-dark-muted">
-          Só R$ 8 a mais para levar os 4 bônus
+          Só R$ 8 a mais para levar os 5 bônus
         </p>
       </div>
 
       <p className="mt-8 text-center text-[14.5px] leading-relaxed text-muted-foreground">
         Menos que um lanche na faculdade para ter <strong className="font-semibold text-navy">40 casos ilustrados</strong>{" "}
-        que você vai consultar em todas as revisões — e, no Completo, mais 25 materiais para treinar o raciocínio.
+        que você vai consultar em todas as revisões — e, no Completo, mais 49 materiais para treinar o raciocínio.
       </p>
     </Section>
   );
@@ -489,7 +489,7 @@ function Guarantee() {
 /* DOBRA 11 — Como funciona o acesso */
 function HowAccess() {
   const steps = [
-    { title: "Escolha seu plano", items: ["Básico: os 40 casos visuais", "Completo: 40 casos + 4 bônus"] },
+    { title: "Escolha seu plano", items: ["Básico: os 40 casos visuais", "Completo: 40 casos + 5 bônus"] },
     { title: "Finalize o pagamento", items: ["Ambiente de compra seguro", "Pagamento único, sem mensalidade"] },
     { title: "Receba o acesso no e-mail", items: ["Envio logo após a confirmação", "Confira também a caixa de spam"] },
     { title: "Comece a estudar", items: ["No celular, tablet ou computador", "Ou imprima em A4 se preferir"] },

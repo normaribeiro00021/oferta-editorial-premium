@@ -13,6 +13,8 @@ import b3s from "@/assets/mockups/bonus_03_modos_360.webp.asset.json";
 import b3l from "@/assets/mockups/bonus_03_modos_540.webp.asset.json";
 import b4s from "@/assets/mockups/bonus_04_caderno_360.webp.asset.json";
 import b4l from "@/assets/mockups/bonus_04_caderno_540.webp.asset.json";
+import b5s from "@/assets/mockups/bonus_05_modos_por_dentro_360.webp.asset.json";
+import b5l from "@/assets/mockups/bonus_05_modos_por_dentro_540.webp.asset.json";
 
 /*
  * Real product mockups (square WebP, white background).
@@ -32,6 +34,7 @@ const BONUS_IMAGES: Record<number, { s: string; l: string; alt: string }> = {
   2: { s: b2s.url, l: b2l.url, alt: "Capa do Bônus 02: Guia Visual dos 3 Estilos de Enfrentamento" },
   3: { s: b3s.url, l: b3l.url, alt: "Capa do Bônus 03: Modos Esquemáticos, Guia de Consulta" },
   4: { s: b4s.url, l: b4l.url, alt: "Capa do Bônus 04: Caderno de Treino do Raciocínio em Esquemas" },
+  5: { s: b5s.url, l: b5l.url, alt: "Capa do Bônus 05: Modos Esquemáticos por Dentro, 24 Mapas de Estudo" },
 };
 
 type Props = { className?: string; priority?: boolean };

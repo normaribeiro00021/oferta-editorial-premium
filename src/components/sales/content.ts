@@ -201,6 +201,14 @@ export const BONUSES = [
     from: "R$ 19,90",
     icon: "✍️",
   },
+  {
+    n: 5,
+    title: "Modos Esquemáticos por Dentro — 24 Mapas de Estudo",
+    desc: "24 mapas para aprofundar o estudo dos modos esquemáticos, com conceitos conectados, exemplos cotidianos e revisão ativa. Adaptação didática independente a partir de David John Arthur Edwards (2022).",
+    count: "24 mapas",
+    from: "R$ 24,90",
+    icon: "🧭",
+  },
 ];
 
 export const PLANS = {
@@ -214,7 +222,7 @@ export const PLANS = {
   },
   completo: {
     title: "Plano Completo",
-    subtitle: "40 casos + 4 bônus exclusivos",
+    subtitle: "40 casos + 5 bônus exclusivos",
     desc: "Para quem quer ler, comparar, consultar e treinar o raciocínio.",
     anchor: "R$ 59,90",
     price: "17,90",
@@ -253,7 +261,7 @@ export const FAQ = [
   },
   {
     q: "Qual a diferença entre o Básico e o Completo?",
-    a: "O Básico traz os 40 casos visuais. O Completo traz os 40 casos + 4 bônus (25 pranchas e fichas extras) para consultar, comparar e treinar. A diferença é de apenas R$ 8.",
+    a: "O Básico traz os 40 casos visuais. O Completo traz os 40 casos + 5 bônus (49 pranchas, mapas e fichas extras) para consultar, comparar e treinar. A diferença é de apenas R$ 8.",
   },
   {
     q: "É assinatura ou pagamento único?",
@@ -268,4 +276,4 @@ export const FAQ = [
 // Urgency bar. With URGENCY_END_DATE = null the deadline rolls to the end of the visitor's current day.
 // Set a real date ("2026-11-30") once the launch promo has a fixed end, so the countdown stops resetting.
 export const URGENCY_END_DATE: string | null = null;
-export const URGENCY_TEXT = "Promoção de lançamento + 4 bônus válida até";
+export const URGENCY_TEXT = "Promoção de lançamento + 5 bônus válida até";
